@@ -1,0 +1,306 @@
+/*****************************************************************************/
+/*
+/* Common
+/*
+/*****************************************************************************/
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body { height: 100%; }
+
+a.no-underline:hover {
+  text-decoration: none;
+}
+
+hr.small {
+        margin-bottom:  4px;
+        margin-top:     4px;
+}
+
+hr.medium {
+        margin-bottom:  13px;
+        margin-top:     13px;
+}
+
+/* Gradient color1 - color2 - color1 */
+hr.style-one {
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc); 
+    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc); 
+}
+
+/* Gradient transparent - color - transparent */                
+hr.style-two {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
+}
+
+
+hr.style-nine {
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.40), rgba(0,0,0,0.75)); 
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.40), rgba(0,0,0,0.75)); 
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.40), rgba(0,0,0,0.75)); 
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.40), rgba(0,0,0,0.75)); 
+}
+
+/* Double-color dashed line */          
+hr.style-three {
+    border: 0;
+    border-bottom: 1px dashed #ccc;
+    background: #999;
+}
+
+/* Inset, by Dan Eden */                
+hr.style-six {
+    border: 0;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Flaired edges, by Tomas Theunissen */        
+hr.style-seven {
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr.style-seven:before { /* Not really supposed to work, but does */
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;    
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+}
+
+/* Glyph, by Harry Roberts */
+hr.style-eight {
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr.style-eight:after {
+    content: "§";
+    display: inline-block;
+    position: relative; 
+    top: -0.7em;  
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+
+span.arrow-up {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-bottom: 4px solid #000;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    content: "";
+}
+
+
+span.arrow-right {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid #000;
+    border-top: 4px solid transparent;
+    content: "";
+}
+
+span.arrow-left {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-bottom: 4px solid transparent;
+    border-right: 4px solid #000;
+    border-top: 4px solid transparent;
+    content: "";
+}
+
+span.arrow-down {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    margin-left: 2px;
+    vertical-align: middle;
+    border-top: 4px solid #000;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    content: "";
+}
+
+span.pointer {
+    cursor: pointer;
+}
+
+/*****************************************************************************/
+/*
+/* Bootstrap Tweaks
+/*
+/*****************************************************************************/
+
+.table.no-borders tr,
+.table.no-borders td {
+  border: none;
+}
+
+
+/*****************************************************************************/
+/*
+/* Home
+/*
+/*****************************************************************************/
+
+#resume-table td.column-heading {
+  font-weight: bolder;
+  border-bottom: 1px solid black !important;
+}
+
+#resume-table td.date {
+  min-width: 110px;
+  text-align: right;
+  padding-right: 0px;
+}
+
+#resume-table td.institution {
+  font-weight: bolder;
+}
+
+#resume-table td.institution span.location {
+  font-weight: normal;
+  font-style: italic;
+  margin-left: 7px;
+}
+
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
+
+#header {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+#header a {
+  margin-right: 10px;
+}
+
+#header h1, h2, h3, h4, h5 {
+  display: inline;
+}
+
+#header .title {
+  margin-right: 35px;
+}
+
+.profile-details {
+  padding-bottom: 15px;
+}
+
+.profile-details img.profile-image {
+  max-width: 100%;
+}
+
+.profile-details ul.nav {
+  text-align: right;
+}
+
+.profile-details div.profile-row {
+  text-align: right;
+  padding-right: 15px;
+  margin-bottom: 3px;
+}
+
+.profile-details div.profile-row div {
+  display: inline;
+}
+
+.profile-details div.profile-row div.icon {
+  color: #7B8C9E;
+  width: 15px;
+  margin-left: 7px;
+}
+
+/*****************************************************************************/
+/*
+/* Posts
+/*
+/*****************************************************************************/
+
+ul.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+}
+
+ul.posts li {
+  line-height: 1.75em;
+}
+
+ul.posts span {
+  color: #aaa;
+  font-family: Monaco, "Courier New", monospace;
+  font-size: 80%;
+}
+
+/* standard */
+.post pre {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  padding: 0 .4em;
+}
+
+.post ul, .post ol {
+  margin-left: 1.35em;
+}
+
+.post code {
+  border: 1px solid #ddd;
+  background-color: #eef;
+  padding: 0 .2em;
+}
+
+.post pre code {
+  border: none;
+}
+
+/* terminal */
+.post pre.terminal {
+  border: 1px solid #000;
+  background-color: #333;
+  color: #FFF;
+}
+
+.post pre.terminal code {
+  background-color: #333;
+}
