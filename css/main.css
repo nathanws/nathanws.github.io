@@ -208,7 +208,7 @@ span.pointer {
 /*****************************************************************************/
 
 #header {
-  padding: 10px;
+  padding: 10px 10px 10px 0px;
   margin-bottom: 10px;
 }
 
@@ -226,6 +226,17 @@ span.pointer {
 
 .profile-details {
   padding-bottom: 15px;
+}
+
+.profile-details hr {
+
+  border: 0;
+  height: 1px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(143,132,132,0.75), rgba(0,0,0,0)); 
+  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(143,132,132,0.75), rgba(0,0,0,0)); 
+  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(143,132,132,0.75), rgba(0,0,0,0)); 
+  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(143,132,132,0.75), rgba(0,0,0,0)); 
+  color: #8F8484;
 }
 
 .profile-details img.profile-image {
