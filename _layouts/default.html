@@ -11,11 +11,11 @@
 
         <!-- Custom CSS -->
         <link rel="stylesheet" href="/css/main.css">
-
         <link rel="stylesheet" href="/css/bootstrap.min.css">
 
+        <script src="/js/jquery-2.0.0.min.js"></script>
         <script src="/js/bootstrap.min.js"></script>
-
+        <script src="/js/main.js"></script>
     </head>
     <body>
 
@@ -32,9 +32,9 @@
                     <div class="panel panel-default profile-details">
                         <img class="profile-image" src="/img/on_a_boat.jpg" alt="I'm On A Boat" title="On A Boat">
                       
-                        <ul class="nav">
-                            <li><a href="/">home</a></li>
-                            <li><a href="/projects">projects</a></li>
+                        <ul id="side-nav" class="nav fancy-font">
+                            <li class="home"><a href="/">HOME</a></li>
+                            <li class="projects"><a href="/projects">PROJECTS</a></li>
                         </ul>
 
                         <hr class="style-two medium" />
@@ -42,6 +42,11 @@
                         <div class="profile-row">
                             <div class="text">Slidell, LA</div>
                             <div class="icon"><span class="glyphicon glyphicon-map-marker"></span></div>
+                        </div>
+
+                        <div class="profile-row">
+                            <div class="text"><a href="http://cditsolutions.com">CDIT</a></div>
+                            <div class="icon"><span class="glyphicon glyphicon-link"></span></div>
                         </div>
 
                         <div class="profile-row">
@@ -57,8 +62,10 @@
             </div>
         </div>
 
-        <div class="footer">
+        <div class="container">
+            <div id="footer">
+                This site is hosted on <a href="http://github.com">GitHub</a>
+            </div>
         </div>
-
     </body>
 </html>
