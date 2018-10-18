@@ -106,6 +106,7 @@ h5 {
 #resume-table td.date {
   min-width: 110px;
   text-align: right;
+  vertical-align: top;
   padding-right: 0px;
 }
 
