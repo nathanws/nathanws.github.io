@@ -1,190 +1,106 @@
 /*****************************************************************************/
 /*
-/* Common
+/* General utils
 /*
 /*****************************************************************************/
-
-/* Global Reset */
-* {
-  margin: 0;
-  padding: 0;
-}
-
-html, body { height: 100%; }
-
-a.no-underline:hover {
+.no-underline {
   text-decoration: none;
 }
-
-hr.small {
-  margin-bottom:  4px;
-  margin-top:     4px;
+.tr {
+  text-align: right;
 }
-
-hr.medium {
-  margin-bottom:  13px;
-  margin-top:     13px;
-}
-
-/* Gradient color1 - color2 - color1 */
-hr.style-one {
-    border: 0;
-    height: 1px;
-    background: #333;
-    background-image: -webkit-linear-gradient(left, #ccc, #333, #ccc); 
-    background-image:    -moz-linear-gradient(left, #ccc, #333, #ccc); 
-    background-image:     -ms-linear-gradient(left, #ccc, #333, #ccc); 
-    background-image:      -o-linear-gradient(left, #ccc, #333, #ccc); 
-}
-
-/* Gradient transparent - color - transparent */                
-hr.style-two {
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0)); 
-}
-
-
-hr.style-nine {
-    border: 0;
-    height: 1px;
-    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.40), rgba(0,0,0,0.75)); 
-    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.40), rgba(0,0,0,0.75)); 
-    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.40), rgba(0,0,0,0.75)); 
-    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.40), rgba(0,0,0,0.75)); 
-}
-
-/* Double-color dashed line */          
-hr.style-three {
-    border: 0;
-    border-bottom: 1px dashed #ccc;
-    background: #999;
-}
-
-/* Inset, by Dan Eden */                
-hr.style-six {
-    border: 0;
-    height: 0;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-/* Flaired edges, by Tomas Theunissen */        
-hr.style-seven {
-    height: 30px;
-    border-style: solid;
-    border-color: black;
-    border-width: 1px 0 0 0;
-    border-radius: 20px;
-}
-hr.style-seven:before { /* Not really supposed to work, but does */
-    display: block;
-    content: "";
-    height: 30px;
-    margin-top: -31px;    
-    border-style: solid;
-    border-color: black;
-    border-width: 0 0 1px 0;
-    border-radius: 20px;
-}
-
-/* Glyph, by Harry Roberts */
-hr.style-eight {
-    padding: 0;
-    border: none;
-    border-top: medium double #333;
-    color: #333;
-    text-align: center;
-}
-hr.style-eight:after {
-    content: "§";
-    display: inline-block;
-    position: relative; 
-    top: -0.7em;  
-    font-size: 1.5em;
-    padding: 0 0.25em;
-    background: white;
-}
-
-span.arrow-up {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 2px;
-    vertical-align: middle;
-    border-bottom: 4px solid #000;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
-    content: "";
-}
-
-
-span.arrow-right {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 2px;
-    vertical-align: middle;
-    border-bottom: 4px solid transparent;
-    border-left: 4px solid #000;
-    border-top: 4px solid transparent;
-    content: "";
-}
-
-span.arrow-left {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 2px;
-    vertical-align: middle;
-    border-bottom: 4px solid transparent;
-    border-right: 4px solid #000;
-    border-top: 4px solid transparent;
-    content: "";
-}
-
-span.arrow-down {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    margin-left: 2px;
-    vertical-align: middle;
-    border-top: 4px solid #000;
-    border-right: 4px solid transparent;
-    border-left: 4px solid transparent;
-    content: "";
-}
-
-span.pointer {
-    cursor: pointer;
+.tt {
+  vertical-align: top;
 }
 
 /*****************************************************************************/
 /*
-/* Bootstrap Tweaks
+/* Skeleton tweaks
 /*
 /*****************************************************************************/
-
 .table.no-borders tr,
 .table.no-borders td {
   border: none;
 }
 
+/*****************************************************************************/
+/*
+/* Site
+/*
+/*****************************************************************************/
 
-/*****************************************************************************/
-/*
-/* Home
-/*
-/*****************************************************************************/
+#footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #8f8484;
+}
+
+#header {
+  padding: 10px 10px 10px 0px;
+  margin-bottom: 10px;
+}
+
+#header a {
+  margin-right: 10px;
+}
+
+#header h1,
+h2,
+h3,
+h4,
+h5 {
+  display: inline;
+}
+
+#header .title {
+  margin-right: 35px;
+}
+
+.sidebar {
+  border: 1px solid #848e99;
+  padding-bottom: 15px;
+  margin-bottom: 10px;
+}
+
+.sidebar img.profile-image {
+  max-width: 100%;
+  margin-bottom: 15px;
+}
+
+.sidebar div.profile-row {
+  text-align: right;
+  padding-right: 15px;
+  margin-bottom: 3px;
+}
+.sidebar a div.profile-row:hover {
+  background-color: #e3e8ee;
+}
+
+.sidebar div.profile-row div {
+  display: inline;
+}
+
+.sidebar div.profile-row div.icon {
+  color: #7b8c9e;
+  width: 15px;
+  margin-left: 7px;
+  font-size: 1.3em;
+}
+
+#resume-table {
+  line-height: 1.3;
+}
+
+#resume-table th, td {
+  padding: 10px 12px;
+}
 
 #resume-table td.column-heading {
   font-weight: bolder;
   border-bottom: 1px solid black !important;
   text-align: right;
   padding-right: 0px;
+  padding-bottom: 3px;
 }
 
 #resume-table td.date {
@@ -203,192 +119,17 @@ span.pointer {
   margin-left: 7px;
 }
 
+@media only screen and (max-width: 768px) {
+
+  #resume-table td.institution span.location {
+    display: block;
+    margin-left: 0px;
+  }
+}
+
+#resume-table td.spacer {
+}
+
 #resume-table td.overview {
   padding: 10px;
-}
-
-/*****************************************************************************/
-/*
-/* Site
-/*
-/*****************************************************************************/
-
-#footer {
-  text-align: center;
-  font-size: .9em;
-  color: #8F8484;
-}
-
-#header {
-  padding: 10px 10px 10px 0px;
-  margin-bottom: 10px;
-}
-
-#header a {
-  margin-right: 10px;
-}
-
-#header h1, h2, h3, h4, h5 {
-  display: inline;
-}
-
-#header .title {
-  margin-right: 35px;
-}
-
-.fancy-font {
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-  font-size: 20px;
-  letter-spacing: 4px;
-}
-
-.page-header-container {
-  width: 100%;
-  text-align: right;
-}
-
-.profile-details {
-  padding-bottom: 15px;
-}
-
-.profile-details hr {
-  border: 0;
-  height: 1px;
-  margin-top: 4px;
-  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(143,132,132,0.75), rgba(0,0,0,0)); 
-  background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(143,132,132,0.75), rgba(0,0,0,0)); 
-  background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(143,132,132,0.75), rgba(0,0,0,0)); 
-  background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(143,132,132,0.75), rgba(0,0,0,0)); 
-  color: #8F8484;
-}
-
-.profile-details img.profile-image {
-  max-width: 100%;
-  margin-bottom: 15px;
-}
-
-.profile-details ul.nav {
-  text-align: right;  
-}
-
-.profile-details ul.nav li a {
-  padding-top: 10px;
-  padding-bottom: 6px;
-  color: black;
-}
-
-.profile-details ul.nav li.active a,
-.profile-details ul.nav li a:hover {
-  color: #eee;
-}
-
-.profile-details ul.nav li.blog {
-  border-right: 3px solid #8e44ad;
-}
-
-.profile-details ul.nav li.blog a:hover { 
-  background-color: #8e44ad;
-}
-
-.profile-details ul.nav li.home { 
-  border-right: 3px solid #2980b9; 
-}
-
-.profile-details ul.nav li.home.active,
-.profile-details ul.nav li.home a:hover { 
-  background-color:#2980b9; 
-}
-
-.profile-details ul.nav li.other { 
-  border-right: 3px solid #2c3e50;
-}
-
-.profile-details ul.nav li.other a:hover { 
-  background-color: #2c3e50;
-}
-
-.profile-details ul.nav li.other2 { 
-  border-right: 3px solid #e67e22;
-}
-
-.profile-details ul.nav li.other2 a:hover { 
-  background-color: #e67e22;
-}
-
-.profile-details ul.nav li.projects {
-  border-right: 3px solid #c0392b;
-}
-
-.profile-details ul.nav li.projects.active,
-.profile-details ul.nav li.projects a:hover { 
-  background-color: #c0392b; 
-}
-
-.profile-details div.profile-row {
-  text-align: right;
-  padding-right: 15px;
-  margin-bottom: 3px;
-}
-
-.profile-details div.profile-row div {
-  display: inline;
-}
-
-.profile-details div.profile-row div.icon {
-  color: #7B8C9E;
-  width: 15px;
-  margin-left: 7px;
-}
-
-/*****************************************************************************/
-/*
-/* Posts
-/*
-/*****************************************************************************/
-
-ul.posts {
-  list-style-type: none;
-  margin-bottom: 2em;
-}
-
-ul.posts li {
-  line-height: 1.75em;
-}
-
-ul.posts span {
-  color: #aaa;
-  font-family: Monaco, "Courier New", monospace;
-  font-size: 80%;
-}
-
-/* standard */
-.post pre {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .4em;
-}
-
-.post ul, .post ol {
-  margin-left: 1.35em;
-}
-
-.post code {
-  border: 1px solid #ddd;
-  background-color: #eef;
-  padding: 0 .2em;
-}
-
-.post pre code {
-  border: none;
-}
-
-/* terminal */
-.post pre.terminal {
-  border: 1px solid #000;
-  background-color: #333;
-  color: #FFF;
-}
-
-.post pre.terminal code {
-  background-color: #333;
 }
